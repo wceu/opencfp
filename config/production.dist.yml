@@ -1,19 +1,19 @@
 application:
-  title: OpenCFP
-  url: http://cfp.dev
-  email: contact@openconf.com
-  eventurl: http://myenvent.com
-  event_location: Miami, FL
-  enddate: Oct. 14th, 2100
+  title: WordCamp Europe 2018
+  url: http://opencfp.local
+  email: hello@wp-europe.org
+  eventurl: https://2018.europe.wordcamp.org/
+  event_location: Belgrade, Serbia
+  enddate: Jun 16th, 2018
   show_submission_count: false
-  airport: MIA
-  arrival: 2018-10-26
-  departure: 2018-10-31
-  secure_ssl: true
+  airport: BEG
+  arrival: 2018-06-14
+  departure: 2018-06-16
+  secure_ssl: false
   online_conference: false
   date_format: d/m/Y
-  date_timezone: "UTC"
-  coc_link: http://confcodeofconduct.com/
+  date_timezone: "Europe/Belgrade"
+  coc_link: https://2018.europe.wordcamp.org/code-of-conduct/
 
 api:
   enabled: true
