@@ -1,6 +1,6 @@
 body {
     background: #FFF;
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: Source Sans Pro, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
     font-size: 1.6rem;
     padding: 5.5rem 0;
     color: #575357;
@@ -56,6 +56,12 @@ a:hover {
     color: #FFF;
 }
 
+.section--primary a:link,
+.section--primary a:visited {
+    color: #fff;
+    text-decoration: underline;
+}
+
 .section--light {
     background: #5566c3;
     color: #575357;
@@ -64,7 +70,7 @@ a:hover {
 .headline {
     margin: 0.75rem 0;
     padding: 0.5rem 0;
-    font-family: "Roboto", sans-serif;
+    font-family: Josefin Sans, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
 }
 
 .headline--alpha {
@@ -172,6 +178,7 @@ a:hover {
     background: transparent;
     border-color: #FFF;
     color: #FFF;
+    margin-right: 15px;
 }
 
 .btn-opencfp--outlined:hover {
