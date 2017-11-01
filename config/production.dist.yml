@@ -1,19 +1,19 @@
 application:
-  title: OpenCFP
-  url: http://cfp.dev
-  email: contact@openconf.com
-  eventurl: http://myenvent.com
-  event_location: Miami, FL
-  enddate: Oct. 14th, 2100
+  title: WordCamp Europe 2018
+  url: http://opencfp.local
+  email: hello@wp-europe.org
+  eventurl: https://2018.europe.wordcamp.org/
+  event_location: Belgrade, Serbia
+  enddate: 15 January 2018
   show_submission_count: false
-  airport: MIA
-  arrival: 2018-10-26
-  departure: 2018-10-31
-  secure_ssl: true
+  airport: BEG
+  arrival: 2018-06-14
+  departure: 2018-06-16
+  secure_ssl: false
   online_conference: false
-  date_format: d/m/Y
-  date_timezone: "UTC"
-  coc_link: http://confcodeofconduct.com/
+  date_format: j F Y
+  date_timezone: "Europe/Belgrade"
+  coc_link: https://2018.europe.wordcamp.org/code-of-conduct/
 
 api:
   enabled: true
@@ -41,25 +41,21 @@ mail:
 
 talk:
   categories:
-    api: APIs (REST, SOAP, etc.)
-    continuousdelivery: Continuous Delivery
-    database: Database
     development: Development
-    devops: Devops
-    framework: Framework
-    ibmi: IBMi
-    javascript: JavaScript
-    security: Security
-    testing: Testing
-    uiux: UI/UX
+    design: Design
+    community: Community
+    content: Content
+    business: Business
     other: Other
   levels:
     entry: Entry level
     mid: Mid-level
     advanced: Advanced
   types:
-    regular: Regular (50 mins)
-    tutorial: Tutorial (3 hrs)
+    lightning: Lightning talk (10 mins)
+    long: Long talk (30 mins, 15mins Q&A)
+    workshop_90_min: Workshop – 90 minutes
+    workshop_3_hours: Workshop – 3 hours
 
 security:
   firewalls:

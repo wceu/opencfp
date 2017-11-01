@@ -4,12 +4,19 @@
 
   <p>{{ talk.description|markdown }}</p>
 
-  <p><strong>Other Info:</strong> {{ talk.other|markdown }}</p>
+  {% if talk.key_takeaway is defined %}
+      <p><strong>Key takeaways:</strong> {{ talk.key_takeaway|striptags|markdown }}</p>
+  {% endif %}
 
-  <p><strong>Slides:</strong> <a href="{{ talk.slides }}">{{ talk.slides }}</a></p>
-  <p><strong>Type:</strong> {{ talkHelper.getTypeDisplayName(talk.type) }}</p>
-  <p><strong>Level:</strong> {{ talkHelper.getLevelDisplayName(talk.level) }}</p>
-  <p><strong>Category:</strong> {{ talkHelper.getCategoryDisplayName(talk.category) }}</p>
-  <p><strong>Desired:</strong> {{ talk.desired ? 'true' : 'false' }}</p>
-  <p><strong>Sponsor:</strong> {{ talk.sponsor ? 'true' : 'false' }}</p>
+  <p><strong>Other notes (directed at our review team):</strong> {{ talk.other|markdown }}</p>
+  <p><strong>Application Type:</strong> {{ talkHelper.getTypeDisplayName(talk.type) }}</p>
+    <p><strong>Category:</strong> {{ talkHelper.getCategoryDisplayName(talk.category) }}</p>
+    <p><strong>Experience Level:</strong> {{ talkHelper.getLevelDisplayName(talk.level) }}</p>
+    <p><strong>Slides:</strong> <a href="{{ talk.slides }}">{{ talk.slides }}</a></p>
+  <p><strong>Have you given this talk/workshop before?</strong> {% if talk.given_before is defined %}{{ talk.given_before ? 'Yes' : 'No' }}{% endif %}</p>
+  <p>{% if talk.given_before is defined and talk.place_given_before is defined  %}<strong>If yes, what event incl. year?</strong> {{ talk.place_given_before | striptags }}{% endif %}</p>
+  <p><strong>Link to video of your previous talks:</strong> {% if talk.videos_urls is defined %}{{ talk.videos_urls }}{% endif %}</p>
+  <p><strong>Link to slides of previous talks/workshops:</strong> {% if talk.slides_urls is defined %}{{ talk.slides_urls }}{% endif %}</p>
+  <p><strong>What other events have you spoken at?</strong> {% if talk.other_events is defined %}{{ talk.other_events }}{% endif %}</p>
+  <p><strong>Is this your preferred submission?</strong> {% if talk.desired is defined %}{{ talk.desired ? 'Yes' : 'No' }}{% endif %}</p>
 {% endblock %}

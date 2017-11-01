@@ -176,6 +176,13 @@ class TalkController extends BaseController
             'other' => $talk_info['other'],
             'sponsor' => $talk_info['sponsor'],
             'buttonInfo' => 'Update my talk!',
+            'key_takeaway' => $talk_info['key_takeaway'],
+            'video_pitch_url' => $talk_info['video_pitch_url'],
+            'given_before' => $talk_info['given_before'],
+            'place_given_before' => $talk_info['place_given_before'],
+            'videos_urls' => $talk_info['videos_urls'],
+            'slides_urls' => $talk_info['slides_urls'],
+            'other_events' => $talk_info['other_events'],
         ];
 
         return $this->render('talk/edit.twig', $data);
@@ -224,6 +231,13 @@ class TalkController extends BaseController
             'other' => $req->get('other'),
             'sponsor' => $req->get('sponsor'),
             'buttonInfo' => 'Submit my talk!',
+            'key_takeaway' => $req->get('key_takeaway'),
+            'video_pitch_url' => $req->get('video_pitch_url'),
+            'given_before' => $req->get('given_before'),
+            'place_given_before' => $req->get('place_given_before'),
+            'videos_urls' => $req->get('videos_urls'),
+            'slides_urls' => $req->get('slides_urls'),
+            'other_events' => $req->get('other_events'),
         ];
 
         return $this->render('talk/create.twig', $data);
@@ -271,6 +285,13 @@ class TalkController extends BaseController
             'other' => $req->get('other'),
             'sponsor' => $req->get('sponsor'),
             'user_id' => $req->get('user_id'),
+            'key_takeaway' => $req->get('key_takeaway'),
+            'video_pitch_url' => $req->get('video_pitch_url'),
+            'given_before' => $req->get('given_before'),
+            'place_given_before' => $req->get('place_given_before'),
+            'videos_urls' => $req->get('videos_urls'),
+            'slides_urls' => $req->get('slides_urls'),
+            'other_events' => $req->get('other_events'),
         ];
 
         $form = $this->getTalkForm($request_data);
@@ -295,6 +316,13 @@ class TalkController extends BaseController
                 'other' => $sanitized_data['other'],
                 'sponsor' => $sanitized_data['sponsor'],
                 'user_id' => (int) $user->getId(),
+                'key_takeaway' => $sanitized_data['key_takeaway'],
+                'video_pitch_url' => $sanitized_data['video_pitch_url'],
+                'given_before' => $sanitized_data['given_before'],
+                'place_given_before' => $sanitized_data['place_given_before'],
+                'videos_urls' => $sanitized_data['videos_urls'],
+                'slides_urls' => $sanitized_data['slides_urls'],
+                'other_events' => $sanitized_data['other_events'],
             ];
 
             $talk = $talk_mapper->build($data);
@@ -309,7 +337,7 @@ class TalkController extends BaseController
             $this->service('session')->set('flash', [
                 'type' => 'success',
                 'short' => 'Success',
-                'ext' => 'Successfully saved talk.',
+                'ext' => 'Thank you! You have successfully submitted your talk application.',
             ]);
 
             // send email to speaker showing submission
@@ -333,6 +361,13 @@ class TalkController extends BaseController
             'other' => $req->get('other'),
             'sponsor' => $req->get('sponsor'),
             'buttonInfo' => 'Submit my talk!',
+            'key_takeaway' => $req->get('key_takeaway'),
+            'video_pitch_url' => $req->get('video_pitch_url'),
+            'given_before' => $req->get('given_before'),
+            'place_given_before' => $req->get('place_given_before'),
+            'videos_urls' => $req->get('videos_urls'),
+            'slides_urls' => $req->get('slides_urls'),
+            'other_events' => $req->get('other_events'),
         ];
 
         $this->service('session')->set('flash', [
@@ -374,6 +409,13 @@ class TalkController extends BaseController
             'other' => $req->get('other'),
             'sponsor' => $req->get('sponsor'),
             'user_id' => $req->get('user_id'),
+            'key_takeaway' => $req->get('key_takeaway'),
+            'video_pitch_url' => $req->get('video_pitch_url'),
+            'given_before' => $req->get('given_before'),
+            'place_given_before' => $req->get('place_given_before'),
+            'videos_urls' => $req->get('videos_urls'),
+            'slides_urls' => $req->get('slides_urls'),
+            'other_events' => $req->get('other_events'),
         ];
 
         $form = $this->getTalkForm($request_data);
@@ -399,6 +441,13 @@ class TalkController extends BaseController
                 'sponsor' => $sanitized_data['sponsor'],
                 'user_id' => (int) $user->getId(),
                 'updated_at' => new \DateTime(),
+                'key_takeaway' => $sanitized_data['key_takeaway'],
+                'video_pitch_url' => $sanitized_data['video_pitch_url'],
+                'given_before' => $sanitized_data['given_before'],
+                'place_given_before' => $sanitized_data['place_given_before'],
+                'videos_urls' => $sanitized_data['videos_urls'],
+                'slides_urls' => $sanitized_data['slides_urls'],
+                'other_events' => $sanitized_data['other_events'],
             ];
 
             $talk = $talk_mapper->get($data['id']);
@@ -417,7 +466,7 @@ class TalkController extends BaseController
             $this->service('session')->set('flash', [
                 'type' => 'success',
                 'short' => 'Success',
-                'ext' => 'Successfully saved talk.',
+                'ext' => 'Thank you! You have successfully submitted your talk application.',
             ]);
 
             // send email to speaker showing submission
@@ -442,6 +491,13 @@ class TalkController extends BaseController
             'other' => $req->get('other'),
             'sponsor' => $req->get('sponsor'),
             'buttonInfo' => 'Update my talk!',
+            'key_takeaway' => $req->get('key_takeaway'),
+            'video_pitch_url' => $req->get('video_pitch_url'),
+            'given_before' => $req->get('given_before'),
+            'place_given_before' => $req->get('place_given_before'),
+            'videos_urls' => $req->get('videos_urls'),
+            'slides_urls' => $req->get('slides_urls'),
+            'other_events' => $req->get('other_events'),
         ];
 
         $this->service('session')->set('flash', [

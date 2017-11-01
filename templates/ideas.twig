@@ -1,37 +1,105 @@
 {% extends "layouts/default.twig" %}
 {% block content %}
-<div class="container">
-    <h2 class="headline--beta">Call for Papers Talk Ideas</h2>
-    <p>
-        {{ site.title }} is not limited to just PHP-related talks. There have been
-        sessions covering a wide range of topics supporting PHP developers and DevOps
-        as well, and we encourage you to "think outside the box" to come up with your
-        own unique topics.
-    </p>
-    <p>
-        Due to financial constraints most conferences tend to pick speakers to present
-        multiple talks. Therefore <strong>it is advisable to submit a few talk ideas, not just one.</strong>
-        By submitting a single talk you may lessen your chances of being selected.
-    </p>
-    <p>
-        To get the ideas flowing, here's a few suggestions:
-    </p>
-    <ul>
-        <li>Virtualization and environments</li>
-        <li>Javascript</li>
-        <li>Alternate PHP run-times</li>
-        <li>PHP internals</li>
-        <li>Development principles</li>
-        <li>Security</li>
-        <li>Mobile-first design</li>
-        <li>Testing (unit, functional, etc.)</li>
-        <li>Version control</li>
-        <li>User Experience/Usability</li>
-        <li>Building APIs (REST, SOAP, whatever)</li>
-        <li>Continuous Integration</li>
-        <li>Framework-related topics</li>
-        <li>Professional development</li>
-    </ul>
-</div>
+    <div class="container text-content">
+        <h2 class="headline--beta">Talk Ideas</h2>
+        <p>
+            The WordPress ecosystem encompasses a broad range of topics. If you are stuck for ideas, here are some topics that we think the WordCamp Europe audience will enjoy:
+        </p>
+        <p>
+            Recently we conducted <a href="https://2018.europe.wordcamp.org/2017/11/10/how-your-feedback-will-help-us-shape-the-next-wordcamp-europe/">a community survey</a> to better understand what our audience wants to see, here are the most voted for topics:
+        </p>
+        <ul>
+            <li>Advanced development</li>
+            <li>Design</li>
+            <li>SEO</li>
+            <li>Business</li>
+        </ul>
+        <h3>
+            Development
+        </h3>
+        <ul>
+            <li>Case studies of big media or enterprise websites</li>
+            <li>Internationalisation</li>
+            <li>Scaling &amp; performance</li>
+            <li>Security</li>
+            <li>Front-end technologies including JavaScript</li>
+            <li>Working with the Customizer</li>
+            <li>Working with taxonomies &amp; terms</li>
+            <li>Automated testing (unit/end-to-end)</li>
+            <li>The WordPress REST API</li>
+            <li>Turning your plugin into a business</li>
+            <li>Development tools, including dev environments, dependencies, and deployment</li>
+            <li>Specific plugins (like BuddyPress, WooCommerce)</li>
+            <li>DevOps</li>
+            <li>Cloud computing</li>
+        </ul>
+        <h3>
+            Building websites with WordPress
+        </h3>
+        <ul>
+            <li>Best practices when building WordPress websites</li>
+            <li>Guide to choosing themes/plugins</li>
+            <li>Security 101</li>
+        </ul>
+        <h3>
+            Design
+        </h3>
+        <ul>
+            <li>Theme design</li>
+            <li>User interface design</li>
+            <li>Typography</li>
+        </ul>
+        <h3>
+            Business
+        </h3>
+        <ul>
+            <li>Going from freelancing to building a team</li>
+            <li>Dealing with clients</li>
+            <li>EU website/internet law</li>
+            <li>Pricing</li>
+            <li>Customer support</li>
+            <li>Business models</li>
+        </ul>
+        <h3>
+            Community
+        </h3>
+        <ul>
+            <li>Contributing as a non-coder</li>
+            <li>Diversity/inclusion</li>
+            <li>Personal stories</li>
+            <li>How to start a meetup</li>
+        </ul>
+        <h3>
+            Content
+        </h3>
+        <ul>
+            <li>Content strategy</li>
+            <li>Blogging/writing</li>
+            <li>Multilingual content</li>
+        </ul>
+        <h3>
+            Work
+        </h3>
+        <ul>
+            <li>Mental health &amp; well-being</li>
+            <li>Business ethics</li>
+            <li>Remote work</li>
+            <li>Workflow and optimization of personal/team productivity</li>
+        </ul>
+        <h3>
+            Other
+        </h3>
+        <ul>
+            <li>Open source &amp; licensing</li>
+            <li>Translations (non-technical aspects)</li>
+            <li>Accessibility</li>
+        </ul>
+        <p>Note that this list is not exhaustive, but is just there to spark your imagination. So if you have any other topics you think our attendees will love, please share!</p>
+        {% if cfp_open %}
+        <p>
+            <a class="btn-opencfp btn-opencfp-medium btn-opencfp--light" href="{{ url('user_new') }}">Apply Now</a>
+        </p>
+        {% endif %}
+    </div>
 {% endblock %}
 

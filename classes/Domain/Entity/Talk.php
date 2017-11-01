@@ -26,6 +26,13 @@ class Talk extends Entity
             'selected' => ['type' => 'smallint', 'value' => 0],
             'created_at' => ['type' => 'datetime', 'value' => new \DateTime()],
             'updated_at' => ['type' => 'datetime', 'value' => new \DateTime()],
+            'key_takeaway' => [ 'type' => 'text'],
+            'video_pitch_url' => [ 'type' => 'text'],
+            'given_before' => [ 'type' => 'smallint', 'value' => 0],
+            'place_given_before' => [ 'type' => 'text'],
+            'videos_urls' => [ 'type' => 'text'],
+            'slides_urls' => [ 'type' => 'text'],
+            'other_events' => [ 'type' => 'text'],
         ];
     }
 
@@ -53,6 +60,13 @@ class Talk extends Entity
             'slides' => $this->slides,
             'other' => $this->other,
             'sponsor' => $this->sponsor,
+            'key_takeaway' => $this->key_takeaway,
+            'video_pitch_url' => $this->video_pitch_url,
+            'given_before' => $this->given_before,
+            'place_given_before' => $this->place_given_before,
+            'videos_urls' => $this->videos_urls,
+            'slides_urls' => $this->slides_urls,
+            'other_events' => $this->other_events,
         ];
     }
 }

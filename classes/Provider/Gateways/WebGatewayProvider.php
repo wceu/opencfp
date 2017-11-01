@@ -39,6 +39,7 @@ class WebGatewayProvider implements BootableProviderInterface, ServiceProviderIn
             if ($app[Authentication::class]->check()) {
                 $twig->addGlobal('user', $app[Authentication::class]->user());
                 $twig->addGlobal('user_is_admin', $app[Authentication::class]->user()->hasAccess('admin'));
+                $twig->addGlobal('user_is_voter', $app[Authentication::class]->user()->hasAccess('vote'));
             }
 
             if ($app['session']->has('flash')) {
@@ -52,8 +53,9 @@ class WebGatewayProvider implements BootableProviderInterface, ServiceProviderIn
         }
 
         $web->get('/', 'OpenCFP\Http\Controller\PagesController::showHomepage')->bind('homepage');
-        $web->get('/package', 'OpenCFP\Http\Controller\PagesController::showSpeakerPackage')->bind('speaker_package');
+        $web->get('/selection', 'OpenCFP\Http\Controller\PagesController::showSpeakerPackage')->bind('speaker_package');
         $web->get('/ideas', 'OpenCFP\Http\Controller\PagesController::showTalkIdeas')->bind('talk_ideas');
+        $web->get('/workshops', 'OpenCFP\Http\Controller\PagesController::showWorkshops')->bind('workshops');
 
         // User Dashboard
         $web->get('/dashboard', 'OpenCFP\Http\Controller\DashboardController::showSpeakerProfile')->bind('dashboard');

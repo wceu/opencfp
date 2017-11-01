@@ -7,11 +7,13 @@
         <link href="/assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
         <link href="/assets/css/site.css" rel="stylesheet" media="screen">
         <link href="/assets/css/font-awesome.min.css" rel="stylesheet" media="screen">
-        <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Roboto:400,700,300' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,700|Source+Sans+Pro:400,400i,700,700i&subset=latin-ext' rel='stylesheet' type='text/css'>
     </head>
     <body class="dashboard">
         <div class="navbar navbar-opencfp navbar-fixed-top section--full" role="navigation">
-            <a href="{{ url('homepage') }}" class="logo pull-left"><img data-src="/assets/img/logo.svg" class="svg-inject" alt="OpenCFP"></a>
+            <a href="{{ url('homepage') }}" class="logo pull-left">
+                <img src="/assets/img/text-only-logo.svg" alt="Open CFP">
+            </a>
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -23,12 +25,12 @@
             <div class="collapse navbar-collapse">
                 {% block navigation %}
                     <ul class="nav navbar-nav navbar-right">
-                        <li{% if active('speaker_package') %} class="active"{% endif %}><a href="{{ url('speaker_package') }}">Speaker Package</a></li>
+                        <li{% if active('speaker_package') %} class="active"{% endif %}><a href="{{ url('speaker_package') }}">Speaker Selection Process</a></li>
                         <li{% if active('talk_ideas') %} class="active"{% endif %}><a href="{{ url('talk_ideas') }}">Talk Ideas</a></li>
-
+                        <li{% if active('workshops') %} class="active"{% endif %}><a href="{{ url('workshops') }}">Workshops</a></li>
                         {% if user is defined and user is not empty %}
                             <li{% if active('dashboard') %} class="active"{% endif %}><a href="{{ url('dashboard') }}">Dashboard</a></li>
-                            {% if user_is_admin %}
+                            {% if user_is_voter or user_is_admin %}
                                 <li><a href="{{ url('admin') }}">Admin</a></li>
                             {% endif %}
                             <li><a href="{{ url('logout') }}">Logout</a></li>

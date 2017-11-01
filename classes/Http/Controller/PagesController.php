@@ -21,6 +21,11 @@ class PagesController extends BaseController
         return $this->render('ideas.twig', $this->getContextWithTalksCount());
     }
 
+    public function showWorkshops()
+    {
+        return $this->render('workshops.twig', $this->getContextWithTalksCount());
+    }
+
     private function getContextWithTalksCount()
     {
         /* @var Locator $spot */

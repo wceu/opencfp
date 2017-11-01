@@ -19,6 +19,13 @@ class TalkForm extends Form
         'other',
         'sponsor',
         'user_id',
+        'key_takeaway',
+        'video_pitch_url',
+        'given_before',
+        'place_given_before',
+        'videos_urls',
+        'slides_urls',
+        'other_events',
     ];
 
     public function __construct(array $data, \HTMLPurifier $purifier, array $options = [])
@@ -63,7 +70,8 @@ class TalkForm extends Form
             $this->validateDesired() &&
             $this->validateSlides() &&
             $this->validateOther() &&
-            $this->validateSponsor()
+            $this->validateSponsor() &&
+            $this->validateGivenBefore()
         );
     }
 
@@ -101,6 +109,11 @@ class TalkForm extends Form
         if (empty($this->_cleanData['description'])) {
             $this->_addErrorMessage('Your description was missing');
 
+            return false;
+        }
+
+        if (strlen($this->_cleanData['description']) > 700) {
+            $this->_addErrorMessage('Talk description cannot exceed 700 characters. Yours is ' . strlen($this->_cleanData['description']) . ' characters.');
             return false;
         }
 
@@ -184,6 +197,18 @@ class TalkForm extends Form
 
     public function validateSponsor()
     {
+        return true;
+    }
+
+    public function validateGivenBefore() {
+        $given_before = $this->_cleanData['given_before'];
+
+        if ( $given_before != '1' && $given_before != '0') {
+            $this->_addErrorMessage('Have you given this talk before? Yes or No');
+
+            return false;
+        }
+
         return true;
     }
 }

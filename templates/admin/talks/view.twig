@@ -14,28 +14,45 @@
                 {% if talk.level is defined %}<span class="label label-primary">{{ talkHelper.getLevelDisplayName(talk.level) }}</span>{% endif %}
                 {% if talk.category is defined %}<span class="label label-warning">{{ talkHelper.getCategoryDisplayName(talk.category) }}</span>{% endif %}
             </p>
+            {% if user_is_admin %}
             <h5><strong>Submitted by:</strong> <a href="{{ url('admin_speaker_view', { id: talk.user_id }) }}">{{ speaker.first_name }} {{ speaker.last_name }}</a></h5>
+            {% endif %}
             <ul class="nav nav-tabs" role="tablist">
                 <li role="presentation" class="active"><a href="#abstract" aria-controls="abstract" role="tab" data-toggle="tab">Abstract</a></li>
                 <li role="presentation"><a href="#additional-info" aria-controls="profile" role="tab" data-toggle="tab">Additional Information</a></li>
+                {% if user_is_admin %}
                 <li role="presentation"><a href="#other-talks" aria-controls="messages" role="tab" data-toggle="tab">Other Talks</a></li>
+                {% endif %}
             </ul>
 
             <div class="tab-content">
                 <div role="tabpanel" class="tab-pane active" id="abstract">
                     <p>{{ talk.description|striptags|markdown }}</p>
-                    {% if talk.other is defined %}
-                        <p><strong>Other Info:</strong> {{ talk.other|striptags|markdown }}</p>
+                    {% if talk.key_takeaway is defined %}
+                        <p><strong>Key takeaways:</strong> {{ talk.key_takeaway|striptags|markdown }}</p>
                     {% endif %}
+
+                    {% if talk.other is defined %}
+                        <p><strong>Other notes (directed at our review team):</strong> {{ talk.other|striptags|markdown }}</p>
+                    {% endif %}
+
                 </div>
                 <div role="tabpanel" class="tab-pane" id="additional-info">
                     <p>
-                        <strong>Slides:</strong> {% if talk.slides is defined %}{{ talk.slides }}{% endif %}<br />
-                        <strong>Type:</strong> {{ talkHelper.getTypeDisplayName(talk.type) }}<br />
-                        <strong>Level:</strong> {% if talk.level is defined %}{{ talkHelper.getLevelDisplayName(talk.level) }}{% endif %}<br />
+                        <strong>Application Type:</strong> {{ talkHelper.getTypeDisplayName(talk.type) }}<br />
                         <strong>Category:</strong> {% if talk.category is defined %}{{ talkHelper.getCategoryDisplayName(talk.category) }}{% endif %}<br />
+                        <strong>Experience Level:</strong> {% if talk.level is defined %}{{ talkHelper.getLevelDisplayName(talk.level) }}{% endif %}<br />
+                        <strong>Slides for this talk:</strong> {% if talk.slides is defined %}{{ talk.slides }}{% endif %}<br />
+                        <br>
+                        {% if user_is_admin %}
+                        <strong>Have you given this talk/workshop before?</strong> {% if talk.given_before is defined %}{{ talk.given_before ? 'Yes' : 'No' }}{% endif %}<br />
+                        {% if talk.given_before is defined and talk.place_given_before is defined  %}<strong>If yes, what event incl. year?</strong> {{ talk.place_given_before | striptags }}<br />{% endif %}
+                        <strong>Link to video of your previous talks</strong> {% if talk.videos_urls is defined %}{{ talk.videos_urls }}{% endif %}<br />
+                        <strong>Link to slides of previous talks/workshops</strong> {% if talk.slides_urls is defined %}{{ talk.slides_urls }}{% endif %}<br />
+                        <strong>What other events have you spoken at?</strong> {% if talk.other_events is defined %}{{ talk.other_events }}{% endif %}<br />
+                        <br>
+                        {% endif %}
                         <strong>Desired:</strong> {% if talk.desired is defined %}{{ talk.desired ? 'Yes' : 'No' }}{% endif %}<br />
-                        <strong>Sponsor:</strong> {% if talk.sponsor is defined %}{{ talk.sponsor ? 'Yes' : 'No' }}{% endif %}<br />
                     </p>
                 </div>
                 <div role="tabpanel" class="tab-pane" id="other-talks">

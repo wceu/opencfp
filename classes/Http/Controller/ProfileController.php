@@ -54,6 +54,10 @@ class ProfileController extends BaseController
             'airport' => $speaker_data['airport'],
             'transportation' => $speaker_data['transportation'],
             'hotel' => $speaker_data['hotel'],
+            'nationality' => $speaker_data['nationality'],
+            'wporg' => $speaker_data['wporg'],
+            'slack' => $speaker_data['slack'],
+            'gravatar' => $speaker_data['gravatar'],
             'id' => $user->getId(),
             'formAction' => $this->url('user_update'),
             'buttonInfo' => 'Update Profile',
@@ -94,6 +98,10 @@ class ProfileController extends BaseController
             'airport' => $req->get('airport'),
             'transportation' => $req->get('transportation'),
             'hotel' => $req->get('hotel'),
+            'nationality' => $req->get('nationality') ?: null,
+            'wporg' => $req->get('wporg') ?: null,
+            'slack' => $req->get('slack') ?: null,
+            'gravatar' => $req->get('gravatar') ?: null,
             'speaker_info' => $req->get('speaker_info') ?: null,
             'speaker_bio' => $req->get('speaker_bio') ?: null,
         ];
@@ -142,6 +150,10 @@ class ProfileController extends BaseController
             $user->airport = $sanitized_data['airport'];
             $user->transportation = (int) $sanitized_data['transportation'];
             $user->hotel = (int) $sanitized_data['hotel'];
+            $user->nationality = $sanitized_data['nationality'];
+            $user->wporg = $sanitized_data['wporg'];
+            $user->slack = $sanitized_data['slack'];
+            $user->gravatar = $sanitized_data['gravatar'];
             $user->info = $sanitized_data['speaker_info'];
             $user->bio = $sanitized_data['speaker_bio'];
 
@@ -271,6 +283,10 @@ class ProfileController extends BaseController
         $user->airport = $sanitized_data['airport'];
         $user->transportation = $sanitized_data['transportation'];
         $user->hotel = $sanitized_data['hotel'];
+        $user->nationality = $sanitized_data['nationality'];
+        $user->wporg = $sanitized_data['wporg'];
+        $user->slack = $sanitized_data['slack'];
+        $user->gravatar = $sanitized_data['gravatar'];
         $user->info = $sanitized_data['speaker_info'];
         $user->bio = $sanitized_data['speaker_bio'];
 

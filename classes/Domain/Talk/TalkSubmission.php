@@ -36,6 +36,13 @@ class TalkSubmission
             'other' => '',
             'sponsor' => '',
             'user_id' => '',
+            'key_takeaway' => '',
+            'video_pitch_url' => '',
+            'given_before' => '',
+            'place_given_before' => '',
+            'videos_urls' => '',
+            'slides_urls' => '',
+            'other_events' => '',
         ], $this->data);
 
         return new Talk($data);

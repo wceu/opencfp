@@ -29,7 +29,7 @@ trait AdminAccessTrait
 
         $user = $auth->user();
 
-        if (!$user->hasPermission('admin')) {
+        if (!($user->hasPermission('vote') || $user->hasPermission('admin'))) {
             return false;
         }
 
