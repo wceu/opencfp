@@ -93,6 +93,22 @@ class SpeakerProfile
         return $this->speaker->photo_path;
     }
 
+    public function getWpOrg() {
+        return $this->speaker->wporg;
+    }
+
+    public function getSlack() {
+        return $this->speaker->slack;
+    }
+
+    public function getNationality() {
+        return $this->speaker->nationality;
+    }
+
+    public function getGravatar() {
+        return $this->speaker->gravatar;
+    }
+
     public function toArrayForApi()
     {
         return [
@@ -101,6 +117,10 @@ class SpeakerProfile
             'twitter' => $this->getTwitter(),
             'url' => $this->getUrl(),
             'bio' => $this->getBio(),
+            'wporg' => $this->getWpOrg(),
+            'slack' => $this->getSlack(),
+            'nationality' => $this->getNationality(),
+            'gravatar' => $this->getGravatar(),
         ];
     }
 }
