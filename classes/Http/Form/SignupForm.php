@@ -22,6 +22,11 @@ class SignupForm extends Form
         'speaker_photo',
         'agree_coc',
         'url',
+        // WCEU added fields
+        'nationality',
+        'wporg',
+        'slack',
+        'gravatar',
     ];
 
     /**

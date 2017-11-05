@@ -69,6 +69,10 @@ class SignupController extends BaseController
         $form_data['speaker_bio'] = $req->get('speaker_bio') ?: null;
         $form_data['transportation'] = $req->get('transportation') ?: null;
         $form_data['hotel'] = $req->get('hotel') ?: null;
+        $form_data['nationality'] = $req->get('nationality') ?: null;
+        $form_data['wporg'] = $req->get('wporg') ?: null;
+        $form_data['slack'] = $req->get('slack') ?: null;
+        $form_data['gravatar'] = $req->get('gravatar') ?: null;
         $form_data['speaker_photo'] = null;
 
         if ($req->files->get('speaker_photo') !== null) {
@@ -109,6 +113,10 @@ class SignupController extends BaseController
                     'password' => $sanitized_data['password'],
                     'airport' => $sanitized_data['airport'],
                     'url' => $sanitized_data['url'],
+                    'nationality' => $sanitized_data['nationality'],
+                    'wporg' => $sanitized_data['wporg'],
+                    'slack' => $sanitized_data['slack'],
+                    'gravatar' => $sanitized_data['gravatar'],
                     'activated' => 1,
                 ];
 

@@ -35,6 +35,12 @@
         </div>
     </div>
     <div class="form-group">
+        <label for="form-user-nationality" class="col-sm-2 control-label">Nationality</label>
+        <div class="col-sm-10">
+            <input id="form-user-nationality" type="text" name="nationality" class="form-control" placeholder="Nationality" value="{{ nationality | default('') }}">
+        </div>
+    </div>
+    <div class="form-group">
         <label for="form-user-company" class="col-sm-2 control-label">Company</label>
         <div class="col-sm-10">
             <input id="form-user-company" type="text" name="company" class="form-control" placeholder="Company" value="{{ company | default('') }}">
@@ -51,6 +57,25 @@
         <div class="col-sm-10">
             <textarea id="form-user-bio" name="speaker_bio" class="form-control" placeholder="Information About You" rows="5">{{ speaker_bio | default('') }}</textarea>
             <p class="help-block">Speaker bio can be written using <a href="http://daringfireball.net/projects/markdown/basics" target="_blank">markdown</a> to support links</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="form-user-wporg" class="col-sm-2 control-label">WordPress.org username</label>
+        <div class="col-sm-10">
+            <input id="form-user-wporg" type="text" name="wporg" class="form-control" placeholder="username" value="{{ wporg | default('') }}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="form-user-slack" class="col-sm-2 control-label">WordPress Slack Username</label>
+        <div class="col-sm-10">
+            <input id="form-user-slack" type="text" name="slack" class="form-control" placeholder="@slack" value="{{ slack | default('') }}">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="form-user-gravatar" class="col-sm-2 control-label">Gravatar Email</label>
+        <div class="col-sm-10">
+            <input id="form-user-gravatar" type="email" name="gravatar" class="form-control" placeholder="you@domain.com" value="{{ gravatar | default('') }}">
         </div>
     </div>
     <div class="form-group">
