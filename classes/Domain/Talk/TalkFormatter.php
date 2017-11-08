@@ -58,6 +58,13 @@ class TalkFormatter implements TalkFormat
             'level' => $talk->level,
             'desired' => $talk->desired,
             'sponsor' => $talk->sponsor,
+            'key_takeaway' => $talk->key_takeaway,
+            'video_pitch_url' => $talk->video_pitch_url,
+            'given_before' => $talk->given_before,
+            'place_given_before' => $talk->place_given_before,
+            'videos_urls' => $talk->videos_urls,
+            'slides_urls' => $talk->slides_urls,
+            'other_events' => $talk->other_events,
         ];
 
         if ($talk->speaker && $userData) {

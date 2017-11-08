@@ -16,6 +16,18 @@
         </div>
     </div>
     <div class="form-group">
+        <label for="form-talk-key_takeaway" class="col-sm-2 control-label">Key takeaway</label>
+        <div class="col-sm-10">
+            <textarea id="form-talk-key_takeaway" name="key_takeaway" class="form-control" placeholder="What is the key message that the audience will take away with them?" rows="5">{{ key_takeaway }}</textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="form-talk-video_pitch_url" class="col-sm-2 control-label">Video pitch</label>
+        <div class="col-sm-10">
+            <input id="form-talk-video_pitch_url" type="text" name="video_pitch_url" class="form-control" placeholder="Want to give yourself the edge? Pitch your idea via video" value="{{ video_pitch_url }}">
+        </div>
+    </div>
+    <div class="form-group">
         <label for="form-talk-slides" class="col-sm-2 control-label">Slides</label>
         <div class="col-sm-10">
             <input id="form-talk-slides" type="text" name="slides" class="form-control" placeholder="Slides URL (if exists)" value="{{ slides }}">
@@ -53,22 +65,50 @@
         </div>
     </div>
     <div class="form-group">
+        <label for="form-given_before" class="col-sm-2 control-label">Have you given this talk before</label>
+        <div class="col-sm-10">
+            <div class="checkbox">
+                <label for="form-given_before">
+                    <input id="form-given_before" name="given_before" type="checkbox" value="1" {% if given_before == '1' %}checked{% endif %}> Yes
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="form-talk-place_given_before" class="col-sm-2 control-label">If yes, where</label>
+        <div class="col-sm-10">
+            <input id="form-talk-place_given_before" type="text" name="place_given_before" class="form-control" placeholder="" value="{{ place_given_before }}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="form-talk-videos_urls" class="col-sm-2 control-label">Videos</label>
+        <div class="col-sm-10">
+            <textarea id="form-talk-videos_urls" name="videos_urls" class="form-control" placeholder="Videos URL" rows="3">{{ videos_urls }}</textarea>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="form-talk-slides_urls" class="col-sm-2 control-label">Slides</label>
+        <div class="col-sm-10">
+            <input id="form-talk-slides_urls" type="text" name="slides_urls" class="form-control" placeholder="Url to your slides_urls" value="{{ slides_urls }}">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="form-talk-other_events" class="col-sm-2 control-label">Other events you have spoken at:</label>
+        <div class="col-sm-10">
+            <textarea id="form-talk-other_events" name="other_events" class="form-control" placeholder="" rows="3">{{ other_events }}</textarea>
+        </div>
+    </div>
+
+    <div class="form-group">
         <label for="form-talk-other" class="col-sm-2 control-label">Additional Talk Information</label>
         <div class="col-sm-10">
             <textarea id="form-talk-other" name="other" class="form-control" placeholder="Other Considerations, such as Joind.In, Lanyrd, local user group, etc." rows="10">{{ other }}</textarea>
             <p class="help-block">Talk additional information can be written using <a href="http://daringfireball.net/projects/markdown/basics" target="_blank">markdown</a> to support links</p>
         </div>
     </div>
-    <div class="form-group">
-        <label for="form-sponsor" class="col-sm-2 control-label">Company Sponsorship</label>
-        <div class="col-sm-10">
-            <div class="checkbox">
-                <label for="form-sponsor">
-                    <input id="form-sponsor" name="sponsor" type="checkbox" value="1" {% if sponsor == '1' %}checked{% endif %}> Is your company sponsoring, or would they like to?
-                </label>
-            </div>
-        </div>
-    </div>
+
     <div class="form-group">
         <label for="form-desired" class="col-sm-2 control-label">Most Desired</label>
         <div class="col-sm-10">
