@@ -41,25 +41,20 @@ mail:
 
 talk:
   categories:
-    api: APIs (REST, SOAP, etc.)
-    continuousdelivery: Continuous Delivery
-    database: Database
-    development: Development
-    devops: Devops
-    framework: Framework
-    ibmi: IBMi
-    javascript: JavaScript
-    security: Security
-    testing: Testing
-    uiux: UI/UX
     other: Other
+    development: Development
+    design: Design
+    community: Community
+    business: Business
   levels:
     entry: Entry level
     mid: Mid-level
     advanced: Advanced
   types:
-    regular: Regular (50 mins)
-    tutorial: Tutorial (3 hrs)
+    lightning: Lightning talk (10 mins, 5mins Q&A)
+    long: Long talk (30 mins, 15mins Q&A)
+    contributor: Contributor Day talk (30 mins, 15mins Q&A)
+    workshop: Workshop
 
 security:
   firewalls:
