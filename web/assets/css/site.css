@@ -157,6 +157,7 @@ a:hover {
 .btn-opencfp--primary {
     background: #FFF;
     color: #5566c3;
+    margin: 10px 7px 0;
 }
 
 .btn-opencfp--primary:hover {
@@ -178,7 +179,7 @@ a:hover {
     background: transparent;
     border-color: #FFF;
     color: #FFF;
-    margin-right: 15px;
+    margin: 10px 7px 0;
 }
 
 .btn-opencfp--outlined:hover {
