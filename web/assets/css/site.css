@@ -72,6 +72,11 @@ a:hover {
     text-decoration: underline;
 }
 
+.text-content,
+.section--primary .container {
+    max-width: 650px;
+}
+
 .section--light {
     background: #5566c3;
     color: #575357;
