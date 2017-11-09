@@ -28,6 +28,16 @@ a:hover {
     padding: 6rem 0;
 }
 
+.header .container {
+    text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+    .header .container {
+        text-align: left;
+    }
+}
+
 .sidebar {
     height: 100%;
     padding: 1rem;
@@ -328,7 +338,13 @@ a:hover {
 }
 
 .event-logo {
-    max-width: 100%;
+    max-width: 200px;
+}
+
+@media screen and (min-width: 992px){
+    .event-logo {
+        max-width: 100%;
+    }
 }
 
 .admin-icon {
@@ -405,8 +421,12 @@ a:hover {
     background: #2d282d;
 }
 
-.navbar-opencfp .logo{
-    padding-top: 5px;
+.navbar-opencfp .logo {
+    padding-top: 10px;
+}
+
+.navbar-opencfp .logo svg {
+    width: 100%;
 }
 
 .navbar-collapse {
