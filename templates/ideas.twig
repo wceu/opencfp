@@ -95,6 +95,11 @@
             <li>Accessibility</li>
         </ul>
         <p>Note that this list is not exhaustive, but is just there to spark your imagination. So if you have any other topics you think our attendees will love, please share!</p>
+        {% if cfp_open %}
+        <p>
+            <a class="btn-opencfp btn-opencfp-medium btn-opencfp--light" href="{{ url('user_new') }}">Apply Now</a>
+        </p>
+        {% endif %}
     </div>
 {% endblock %}
 
