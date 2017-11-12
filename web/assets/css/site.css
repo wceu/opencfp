@@ -10,8 +10,16 @@ a {
     color: #8282be;
 }
 
+a:hover, a:focus {
+    color: #8282be;
+}
+
 a:hover {
     color: #8282be;
+}
+
+.text-content a {
+    text-decoration: underline;
 }
 
 .dashboard {
@@ -175,9 +183,11 @@ a:hover {
     margin: 10px 7px 0;
 }
 
-.btn-opencfp--primary:hover {
+.btn-opencfp--primary:hover,
+.btn-opencfp--primary:focus {
     background: #F7F7F7;
     color: #5566c3;
+    text-decoration: underline;
 }
 
 .btn-opencfp--light {
@@ -185,9 +195,11 @@ a:hover {
     color: #FFF;
 }
 
-.btn-opencfp--light:hover {
+.btn-opencfp--light:hover,
+.btn-opencfp--light:focus {
     background: #2d282d;
     color: #FFF;
+    text-decoration: underline;
 }
 
 .btn-opencfp--outlined {
@@ -197,9 +209,12 @@ a:hover {
     margin: 10px 7px 0;
 }
 
-.btn-opencfp--outlined:hover {
-    background: #FFF;
-    color: #5566c3;
+.btn-opencfp--outlined:hover,
+.btn-opencfp--outlined:focus {
+    background: transparent;
+    border-color: #FFF;
+    color: #FFF;
+    text-decoration: underline;
 }
 
 .btn-opencfp--centered {
@@ -457,6 +472,11 @@ a:hover {
 {
     background: none;
     border-color: #5566c3;
+}
+
+.nav>li>a:hover,
+.nav>li>a:focus {
+    background-color: transparent;
 }
 
 .navbar-opencfp .navbar-toggle {
