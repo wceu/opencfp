@@ -54,14 +54,11 @@ class SignupForm extends Form
         $valid_url = $this->validateUrl();
         $valid_speaker_photo = $this->validateSpeakerPhoto();
         $valid_speaker_info = true;
-        $valid_speaker_bio = true;
+        $valid_speaker_bio = $this->validateSpeakerBio();
+        $valid_speaker_nationality = $this->validateSpeakerNationality();
 
         if (!empty($this->_taintedData['speaker_info'])) {
             $valid_speaker_info = $this->validateSpeakerInfo();
-        }
-
-        if (!empty($this->_taintedData['speaker_bio'])) {
-            $valid_speaker_bio = $this->validateSpeakerBio();
         }
 
         return (
@@ -75,6 +72,7 @@ class SignupForm extends Form
             $valid_speaker_info &&
             $valid_speaker_bio &&
             $valid_speaker_photo &&
+            $valid_speaker_nationality &&
             $agree_coc
         );
     }
@@ -298,7 +296,7 @@ class SignupForm extends Form
         $speaker_bio = $this->_purifier->purify($speaker_bio);
 
         if (empty($speaker_bio)) {
-            $this->_addErrorMessage('You submitted speaker bio information but it was empty after sanitizing');
+            $this->_addErrorMessage('Sorry, we need your bio to complete the signup');
             $validation_response = false;
         }
 
@@ -345,5 +343,27 @@ class SignupForm extends Form
 
         $this->_addErrorMessage('You must agree to abide by our code of conduct in order to submit');
         return false;
+    }
+
+    public function validateSpeakerNationality() {
+        $nationality = $this->_cleanData['nationality'];
+        $validation_response = true;
+
+        if (empty($nationality)) {
+            $this->_addErrorMessage('Country cannot be blank');
+            $validation_response = false;
+        }
+
+        if (strlen($nationality) > 255) {
+            $this->_addErrorMessage('Country cannot exceed 255 characters');
+            $validation_response = false;
+        }
+
+        if ($nationality !== $this->_taintedData['nationality']) {
+            $this->_addErrorMessage('Country contains unwanted characters');
+            $validation_response = false;
+        }
+
+        return $validation_response;
     }
 }
