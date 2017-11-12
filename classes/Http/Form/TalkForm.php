@@ -70,7 +70,8 @@ class TalkForm extends Form
             $this->validateDesired() &&
             $this->validateSlides() &&
             $this->validateOther() &&
-            $this->validateSponsor()
+            $this->validateSponsor() &&
+            $this->validateGivenBefore()
         );
     }
 
@@ -191,6 +192,18 @@ class TalkForm extends Form
 
     public function validateSponsor()
     {
+        return true;
+    }
+
+    public function validateGivenBefore() {
+        $given_before = $this->_cleanData['given_before'];
+
+        if ( $given_before != '1' && $given_before != '0') {
+            $this->_addErrorMessage('Have you given this talk before? Yes or No');
+
+            return false;
+        }
+
         return true;
     }
 }

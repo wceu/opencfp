@@ -3,13 +3,13 @@
         <input name="id" type="hidden" value="{{ id }}">
     {% endif %}
     <div class="form-group">
-        <label for="form-talk-title" class="col-sm-2 control-label">Talk Title</label>
+        <label for="form-talk-title" class="col-sm-2 control-label">Talk Title *</label>
         <div class="col-sm-10">
             <input id="form-talk-title" type="text" name="title" class="form-control" placeholder="Talk Title" value="{{ title }}" maxlength="100">
         </div>
     </div>
     <div class="form-group">
-        <label for="form-talk-description" class="col-sm-2 control-label">Description/Abstract</label>
+        <label for="form-talk-description" class="col-sm-2 control-label">Talk Description *</label>
         <div class="col-sm-10">
             <textarea id="form-talk-description" name="description" class="form-control" placeholder="Give a description of your talk (Abstract)" rows="10">{{ description }}</textarea>
             <p class="help-block">Speaker abstract can be written using <a href="http://daringfireball.net/projects/markdown/basics" target="_blank">markdown</a> to support links</p>
@@ -34,7 +34,7 @@
         </div>
     </div>
     <div class="form-group">
-        <label for="form-talk-type" class="col-sm-2 control-label">Talk Type</label>
+        <label for="form-talk-type" class="col-sm-2 control-label">Talk Type *</label>
         <div class="col-sm-10">
             <select id="form-talk-type" name="type" class="form-control">
                 {% for typeKey, displayType in talkTypes %}
@@ -45,7 +45,7 @@
     </div>
 
     <div class="form-group">
-        <label for="form-talk-category" class="col-sm-2 control-label">Talk Category</label>
+        <label for="form-talk-category" class="col-sm-2 control-label">Talk Category *</label>
         <div class="col-sm-10">
             <select id="form-talk-category" name="category" class="form-control">
                {% for categoryKey, displayCategory in talkCategories %}
@@ -55,7 +55,7 @@
         </div>
     </div>
     <div class="form-group">
-        <label for="form-talk-level" class="col-sm-2 control-label">Talk Level</label>
+        <label for="form-talk-level" class="col-sm-2 control-label">Talk Level *</label>
         <div class="col-sm-10">
             <select id="form-talk-level" name="level" class="form-control">
                 {% for levelKey, displayLevel in talkLevels %}
@@ -65,37 +65,42 @@
         </div>
     </div>
     <div class="form-group">
-        <label for="form-given_before" class="col-sm-2 control-label">Have you given this talk before</label>
+        <label for="form-given_before" class="col-sm-2 control-label">Have you given this talk before? *</label>
         <div class="col-sm-10">
-            <div class="checkbox">
+            <div class="radio">
                 <label for="form-given_before">
-                    <input id="form-given_before" name="given_before" type="checkbox" value="1" {% if given_before == '1' %}checked{% endif %}> Yes
+                    <input id="form-given_before" name="given_before" type="radio" value="1" {% if given_before == '1' %}checked{% endif %}> Yes
+                </label>
+            </div>
+            <div class="radio">
+                <label for="form-given_before_no">
+                    <input id="form-given_before_no" name="given_before" type="radio" value="0" {% if given_before != '1' %}checked{% endif %}> No
                 </label>
             </div>
         </div>
     </div>
     <div class="form-group">
-        <label for="form-talk-place_given_before" class="col-sm-2 control-label">If yes, where</label>
+        <label for="form-talk-place_given_before" class="col-sm-2 control-label">If yes, what event incl. year?</label>
         <div class="col-sm-10">
             <input id="form-talk-place_given_before" type="text" name="place_given_before" class="form-control" placeholder="" value="{{ place_given_before }}">
         </div>
     </div>
     <div class="form-group">
-        <label for="form-talk-videos_urls" class="col-sm-2 control-label">Videos</label>
+        <label for="form-talk-videos_urls" class="col-sm-2 control-label">Videos of your previous talks</label>
         <div class="col-sm-10">
-            <textarea id="form-talk-videos_urls" name="videos_urls" class="form-control" placeholder="Videos URL" rows="3">{{ videos_urls }}</textarea>
+            <textarea id="form-talk-videos_urls" name="videos_urls" class="form-control" placeholder="Share videos of you previous talks (if you have them)" rows="3">{{ videos_urls }}</textarea>
         </div>
     </div>
 
     <div class="form-group">
-        <label for="form-talk-slides_urls" class="col-sm-2 control-label">Slides</label>
+        <label for="form-talk-slides_urls" class="col-sm-2 control-label">Slides for your previous talks</label>
         <div class="col-sm-10">
-            <input id="form-talk-slides_urls" type="text" name="slides_urls" class="form-control" placeholder="Url to your slides_urls" value="{{ slides_urls }}">
+            <input id="form-talk-slides_urls" type="text" name="slides_urls" class="form-control" placeholder="Share videos of you previous talks (if you have them)" value="{{ slides_urls }}">
         </div>
     </div>
 
     <div class="form-group">
-        <label for="form-talk-other_events" class="col-sm-2 control-label">Other events you have spoken at:</label>
+        <label for="form-talk-other_events" class="col-sm-2 control-label">What other events have you spoken at?</label>
         <div class="col-sm-10">
             <textarea id="form-talk-other_events" name="other_events" class="form-control" placeholder="" rows="3">{{ other_events }}</textarea>
         </div>
@@ -110,11 +115,11 @@
     </div>
 
     <div class="form-group">
-        <label for="form-desired" class="col-sm-2 control-label">Most Desired</label>
+        <label for="form-desired" class="col-sm-2 control-label">Preferred Submission</label>
         <div class="col-sm-10">
             <div class="checkbox">
                 <label for="form-desired">
-                    <input id="form-desired" name="desired" type="checkbox" value="1" {% if desired == '1' %}checked{% endif %}> Of your submissions, is this your best?
+                    <input id="form-desired" name="desired" type="checkbox" value="1" {% if desired == '1' %}checked{% endif %}> If you submit several talk ideas, Is this your preferred submission?
                 </label>
             </div>
         </div>
