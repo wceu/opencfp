@@ -4,14 +4,14 @@ application:
   email: hello@wp-europe.org
   eventurl: https://2018.europe.wordcamp.org/
   event_location: Belgrade, Serbia
-  enddate: Jun 16th, 2018
+  enddate: 15 January 2018
   show_submission_count: false
   airport: BEG
   arrival: 2018-06-14
   departure: 2018-06-16
   secure_ssl: false
   online_conference: false
-  date_format: d/m/Y
+  date_format: j F Y
   date_timezone: "Europe/Belgrade"
   coc_link: https://2018.europe.wordcamp.org/code-of-conduct/
 
