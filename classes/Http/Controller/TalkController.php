@@ -337,7 +337,7 @@ class TalkController extends BaseController
             $this->service('session')->set('flash', [
                 'type' => 'success',
                 'short' => 'Success',
-                'ext' => 'Successfully saved talk.',
+                'ext' => 'Thank you! You have successfully submitted your talk application.',
             ]);
 
             // send email to speaker showing submission
@@ -466,7 +466,7 @@ class TalkController extends BaseController
             $this->service('session')->set('flash', [
                 'type' => 'success',
                 'short' => 'Success',
-                'ext' => 'Successfully saved talk.',
+                'ext' => 'Thank you! You have successfully submitted your talk application.',
             ]);
 
             // send email to speaker showing submission
