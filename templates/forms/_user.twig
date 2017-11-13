@@ -55,7 +55,7 @@
     <div class="form-group">
         <label for="form-user-bio" class="col-sm-2 control-label">Speaker Bio *</label>
         <div class="col-sm-10">
-            <textarea id="form-user-bio" name="speaker_bio" class="form-control" placeholder="Information About You" rows="5">{{ speaker_bio | default('') }}</textarea>
+            <textarea id="form-user-bio" name="speaker_bio" class="form-control" placeholder="Information About You (Max 500 characters)" rows="5">{{ speaker_bio | default('') }}</textarea>
             <p class="help-block">Speaker bio can be written using <a href="http://daringfireball.net/projects/markdown/basics" target="_blank">markdown</a> to support links</p>
         </div>
     </div>

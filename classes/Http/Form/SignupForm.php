@@ -300,6 +300,11 @@ class SignupForm extends Form
             $validation_response = false;
         }
 
+        if (strlen($speaker_bio) > 500) {
+            $this->_addErrorMessage('Your bio cannot exceed 500 characters. Yours is ' . strlen($speaker_bio) . ' characters.');
+            $validation_response = false;
+        }
+
         return $validation_response;
     }
 
