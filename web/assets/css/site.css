@@ -18,8 +18,25 @@ a:hover {
     color: #8282be;
 }
 
-.text-content a {
+.container a {
     text-decoration: underline;
+}
+
+.header .container a,
+.section .container a {
+    text-decoration: none;
+}
+
+.header .container a:hover,
+.header .container a:focus,
+.section .container a:hover,
+.section .container a:focus{
+    text-decoration: underline;
+}
+
+a:focus {
+    outline: 5px auto;
+    outline-offset: -2px;
 }
 
 .dashboard {
@@ -90,10 +107,16 @@ a:hover {
     color: #575357;
 }
 
-.headline {
+.headline,
+.subheadline {
     margin: 0.75rem 0;
     padding: 0.5rem 0;
     font-family: Josefin Sans, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+}
+
+.subheadline {
+    font-size: 24px;
+    line-height: 1.1;
 }
 
 .headline--alpha {
@@ -442,7 +465,7 @@ a:hover {
 }
 
 .navbar-opencfp .logo {
-    padding-top: 10px;
+    padding: 10px 0;
 }
 
 .navbar-opencfp .logo img {
