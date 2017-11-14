@@ -41,19 +41,19 @@ mail:
 
 talk:
   categories:
-    business: Business
-    community: Community
-    design: Design
     development: Development
+    design: Design
+    community: Community
+    content: Content
+    business: Business
     other: Other
   levels:
     entry: Entry level
     mid: Mid-level
     advanced: Advanced
   types:
-    lightning: Lightning talk (10 mins, 5mins Q&A)
+    lightning: Lightning talk (10 mins)
     long: Long talk (30 mins, 15mins Q&A)
-    workshop: Workshop
 
 security:
   firewalls:

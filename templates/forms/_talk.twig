@@ -9,28 +9,23 @@
         </div>
     </div>
     <div class="form-group">
-        <label for="form-talk-description" class="col-sm-2 control-label">Talk Description *</label>
+        <label for="form-talk-description" class="col-sm-2 control-label">Official talk description (max. 700 characters, no bullet points) *</label>
         <div class="col-sm-10">
             <textarea id="form-talk-description" name="description" class="form-control" placeholder="Give a description of your talk (Abstract)" rows="10">{{ description }}</textarea>
             <p class="help-block">Speaker abstract can be written using <a href="http://daringfireball.net/projects/markdown/basics" target="_blank">markdown</a> to support links</p>
         </div>
     </div>
     <div class="form-group">
-        <label for="form-talk-key_takeaway" class="col-sm-2 control-label">Key takeaway</label>
+        <label for="form-talk-key_takeaway" class="col-sm-2 control-label">Key takeaway (max. 500 characters)</label>
         <div class="col-sm-10">
             <textarea id="form-talk-key_takeaway" name="key_takeaway" class="form-control" placeholder="What is the key message that the audience will take away with them?" rows="5">{{ key_takeaway }}</textarea>
         </div>
     </div>
     <div class="form-group">
-        <label for="form-talk-video_pitch_url" class="col-sm-2 control-label">Video pitch</label>
+        <label for="form-talk-other" class="col-sm-2 control-label">Other talk notes (directed at our review team)</label>
         <div class="col-sm-10">
-            <input id="form-talk-video_pitch_url" type="text" name="video_pitch_url" class="form-control" placeholder="Want to give yourself the edge? Pitch your idea via video" value="{{ video_pitch_url }}">
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="form-talk-slides" class="col-sm-2 control-label">Slides</label>
-        <div class="col-sm-10">
-            <input id="form-talk-slides" type="text" name="slides" class="form-control" placeholder="Slides URL (if exists)" value="{{ slides }}">
+            <textarea id="form-talk-other" name="other" class="form-control" rows="10">{{ other }}</textarea>
+            <p class="help-block">Talk additional information can be written using <a href="http://daringfireball.net/projects/markdown/basics" target="_blank">markdown</a> to support links</p>
         </div>
     </div>
     <div class="form-group">
@@ -38,18 +33,17 @@
         <div class="col-sm-10">
             <select id="form-talk-type" name="type" class="form-control">
                 {% for typeKey, displayType in talkTypes %}
-                <option value="{{ typeKey }}" {% if type == typeKey %}selected {% endif %}>{{ displayType }}</option>
+                    <option value="{{ typeKey }}" {% if type == typeKey %}selected {% endif %}>{{ displayType }}</option>
                 {% endfor %}
             </select>
         </div>
     </div>
-
     <div class="form-group">
         <label for="form-talk-category" class="col-sm-2 control-label">Talk Category *</label>
         <div class="col-sm-10">
             <select id="form-talk-category" name="category" class="form-control">
-               {% for categoryKey, displayCategory in talkCategories %}
-                <option value="{{ categoryKey }}" {% if category == categoryKey %}selected {% endif %}>{{ displayCategory }}</option>
+                {% for categoryKey, displayCategory in talkCategories %}
+                    <option value="{{ categoryKey }}" {% if category == categoryKey %}selected {% endif %}>{{ displayCategory }}</option>
                 {% endfor %}
             </select>
         </div>
@@ -59,11 +53,18 @@
         <div class="col-sm-10">
             <select id="form-talk-level" name="level" class="form-control">
                 {% for levelKey, displayLevel in talkLevels %}
-                <option value="{{ levelKey }}" {% if level == levelKey %}selected {% endif %}>{{ displayLevel }}</option>
+                    <option value="{{ levelKey }}" {% if level == levelKey %}selected {% endif %}>{{ displayLevel }}</option>
                 {% endfor %}
             </select>
         </div>
     </div>
+    <div class="form-group">
+        <label for="form-talk-slides" class="col-sm-2 control-label">Slides</label>
+        <div class="col-sm-10">
+            <input id="form-talk-slides" type="text" name="slides" class="form-control" placeholder="Slides URL (if exists)" value="{{ slides }}">
+        </div>
+    </div>
+
     <div class="form-group">
         <label for="form-given_before" class="col-sm-2 control-label">Have you given this talk before? *</label>
         <div class="col-sm-10">
@@ -86,16 +87,16 @@
         </div>
     </div>
     <div class="form-group">
-        <label for="form-talk-videos_urls" class="col-sm-2 control-label">Videos of your previous talks</label>
+        <label for="form-talk-videos_urls" class="col-sm-2 control-label">Link to video of your previous talks</label>
         <div class="col-sm-10">
-            <textarea id="form-talk-videos_urls" name="videos_urls" class="form-control" placeholder="Share videos of you previous talks (if you have them)" rows="3">{{ videos_urls }}</textarea>
+            <textarea id="form-talk-videos_urls" name="videos_urls" class="form-control" rows="3">{{ videos_urls }}</textarea>
         </div>
     </div>
 
     <div class="form-group">
-        <label for="form-talk-slides_urls" class="col-sm-2 control-label">Slides for your previous talks</label>
+        <label for="form-talk-slides_urls" class="col-sm-2 control-label">Link to slides of previous talks </label>
         <div class="col-sm-10">
-            <input id="form-talk-slides_urls" type="text" name="slides_urls" class="form-control" placeholder="Share videos of you previous talks (if you have them)" value="{{ slides_urls }}">
+            <input id="form-talk-slides_urls" type="text" name="slides_urls" class="form-control" value="{{ slides_urls }}">
         </div>
     </div>
 
@@ -106,13 +107,7 @@
         </div>
     </div>
 
-    <div class="form-group">
-        <label for="form-talk-other" class="col-sm-2 control-label">Additional Talk Information</label>
-        <div class="col-sm-10">
-            <textarea id="form-talk-other" name="other" class="form-control" placeholder="Other Considerations, such as Joind.In, Lanyrd, local user group, etc." rows="10">{{ other }}</textarea>
-            <p class="help-block">Talk additional information can be written using <a href="http://daringfireball.net/projects/markdown/basics" target="_blank">markdown</a> to support links</p>
-        </div>
-    </div>
+
 
     <div class="form-group">
         <label for="form-desired" class="col-sm-2 control-label">Preferred Submission</label>

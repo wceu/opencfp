@@ -112,6 +112,11 @@ class TalkForm extends Form
             return false;
         }
 
+        if (strlen($this->_cleanData['description']) > 700) {
+            $this->_addErrorMessage('Talk description cannot exceed 700 characters. Yours is ' . strlen($this->_cleanData['description']) . ' characters.');
+            return false;
+        }
+
         return true;
     }
 
