@@ -478,9 +478,6 @@ a:focus {
 
 .navbar-opencfp .logo {
     padding: 10px 0;
-}
-
-.navbar-opencfp .logo {
     max-width: 300px;
     width: 100%;
 }
