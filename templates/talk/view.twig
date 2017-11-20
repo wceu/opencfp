@@ -8,10 +8,6 @@
       <p><strong>Key takeaways:</strong> {{ talk.key_takeaway|striptags|markdown }}</p>
   {% endif %}
 
-  {% if talk.video_pitch_url is defined %}
-      <p><strong>Video Pitch URL:</strong> <a href="{{ talk.video_pitch_url|striptags }}">{{ talk.video_pitch_url|striptags }}</a></p>
-  {% endif %}
-
   <p><strong>Other Info:</strong> {{ talk.other|markdown }}</p>
 
   <p><strong>Slides:</strong> <a href="{{ talk.slides }}">{{ talk.slides }}</a></p>
