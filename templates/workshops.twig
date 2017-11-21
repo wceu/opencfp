@@ -1,0 +1,81 @@
+{% extends "layouts/default.twig" %}
+{% block content %}
+    <div class="container text-content">
+        <h2 class="headline--beta">Workshops</h2>
+
+        <p>For the first time ever at WCEU, we’re excited to open the call for workshops. This year we are thrilled to
+        offer this new content format to our WCEU audience, and workshops are a great way to level up skills, work with
+        fellow WordPressers, and share in-depth knowledge. We are looking forward to receiving workshop applications,
+            and making this a new, educational and fun experience for everyone.</p>
+
+        <p>If you need any inspiration to find a good workshop topic, we’re put together a list of ideas below:</p>
+
+        <h3>Development workshops (beginner and intermediate level)</h3>
+        <ul>
+        <li>Custom plugin development</li>
+        <li>Development environments</li>
+        <li>WordPress and Security</li>
+        <li>The WordPress Customizer</li>
+        <li>Accessibility</li>
+        <li>Internationalization</li>
+        <li>eCommerce</li>
+        <li>Developing a custom WordPress theme</li>
+        <li>Coding Standards (front-end, back-end)</li>
+        <li>CSS</li>
+        <li>Grids</li>
+            </ul>
+
+        <h3>Advanced Development workshops</h3>
+        <ul>
+        <li>The Rest API</li>
+        <li>Javascript</li>
+        <li>JS Frameworks (React, Angular, Vue.js, etc.)</li>
+        <li>Backbone</li>
+        <li>OOP (Object Oriented Programming)</li>
+            </ul>
+
+        <h3>Design and UX workshops</h3>
+        <ul>
+        <li>User Experience</li>
+        <li>Design process</li>
+        <li>Design thinking</li>
+        <li>Customer journey</li>
+        <li>Product strategy</li>
+        <li>Prototyping</li>
+        <li>Users Research / Testing</li>
+        </ul>
+
+        <h3>Community workshops</h3>
+        <ul>
+        <li>Building a local WordPress community</li>
+        <li>Speaking at WordCamps</li>
+        </ul>
+
+        <h3>Content workshops</h3>
+        <ul>
+        <li>Content strategy</li>
+        <li>Create compelling content</li>
+        <li>Storytelling</li>
+        <li>Content planning for multi-language sites</li>
+        <li>Publishing</li>
+        <li>SEO</li>
+        </ul>
+
+        <h3>Business workshops</h3>
+        <ul>
+        <li>Running a successful design/dev shop</li>
+        <li>Project scoping and estimation</li>
+        <li>Find your niche</li>
+        <li>SaaS</li>
+        <li>Selling online</li>
+        <li>Internet law</li>
+        </ul>
+
+        {% if cfp_open %}
+        <p>
+            <a class="btn-opencfp btn-opencfp-medium btn-opencfp--light" href="{{ url('user_new') }}">Apply Now</a>
+        </p>
+        {% endif %}
+    </div>
+{% endblock %}
+

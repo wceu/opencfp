@@ -27,7 +27,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li{% if active('speaker_package') %} class="active"{% endif %}><a href="{{ url('speaker_package') }}">Speaker Selection Process</a></li>
                         <li{% if active('talk_ideas') %} class="active"{% endif %}><a href="{{ url('talk_ideas') }}">Talk Ideas</a></li>
-
+                        <li{% if active('workshops') %} class="active"{% endif %}><a href="{{ url('workshops') }}">Workshops</a></li>
                         {% if user is defined and user is not empty %}
                             <li{% if active('dashboard') %} class="active"{% endif %}><a href="{{ url('dashboard') }}">Dashboard</a></li>
                             {% if user_is_admin %}
