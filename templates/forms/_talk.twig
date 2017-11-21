@@ -3,15 +3,15 @@
         <input name="id" type="hidden" value="{{ id }}">
     {% endif %}
     <div class="form-group">
-        <label for="form-talk-title" class="col-sm-2 control-label">Talk Title *</label>
+        <label for="form-talk-title" class="col-sm-2 control-label">Talk/Workshop Title *</label>
         <div class="col-sm-10">
-            <input id="form-talk-title" type="text" name="title" class="form-control" placeholder="Talk Title" value="{{ title }}" maxlength="100">
+            <input id="form-talk-title" type="text" name="title" class="form-control" placeholder="Talk/Workshop Title" value="{{ title }}" maxlength="100">
         </div>
     </div>
     <div class="form-group">
-        <label for="form-talk-description" class="col-sm-2 control-label">Official talk description (max. 700 characters, no bullet points) *</label>
+        <label for="form-talk-description" class="col-sm-2 control-label">Description (max. 700 characters, no bullet points) *</label>
         <div class="col-sm-10">
-            <textarea id="form-talk-description" name="description" class="form-control" placeholder="Give a description of your talk (Abstract)" rows="10">{{ description }}</textarea>
+            <textarea id="form-talk-description" name="description" class="form-control" placeholder="Give a description of your talk/workshop (Abstract)" rows="10">{{ description }}</textarea>
             <p class="help-block">Speaker abstract can be written using <a href="http://daringfireball.net/projects/markdown/basics" target="_blank">markdown</a> to support links</p>
         </div>
     </div>
@@ -22,14 +22,14 @@
         </div>
     </div>
     <div class="form-group">
-        <label for="form-talk-other" class="col-sm-2 control-label">Other talk notes (directed at our review team)</label>
+        <label for="form-talk-other" class="col-sm-2 control-label">Other notes (directed at our review team)</label>
         <div class="col-sm-10">
             <textarea id="form-talk-other" name="other" class="form-control" rows="10">{{ other }}</textarea>
-            <p class="help-block">Talk additional information can be written using <a href="http://daringfireball.net/projects/markdown/basics" target="_blank">markdown</a> to support links</p>
+            <p class="help-block">Add any technical requirements for your talk or workshop, workshop audience size, etc.</p>
         </div>
     </div>
     <div class="form-group">
-        <label for="form-talk-type" class="col-sm-2 control-label">Talk Type *</label>
+        <label for="form-talk-type" class="col-sm-2 control-label">Application Type *</label>
         <div class="col-sm-10">
             <select id="form-talk-type" name="type" class="form-control">
                 {% for typeKey, displayType in talkTypes %}
@@ -39,7 +39,7 @@
         </div>
     </div>
     <div class="form-group">
-        <label for="form-talk-category" class="col-sm-2 control-label">Talk Category *</label>
+        <label for="form-talk-category" class="col-sm-2 control-label">Category *</label>
         <div class="col-sm-10">
             <select id="form-talk-category" name="category" class="form-control">
                 {% for categoryKey, displayCategory in talkCategories %}
@@ -49,7 +49,7 @@
         </div>
     </div>
     <div class="form-group">
-        <label for="form-talk-level" class="col-sm-2 control-label">Talk Level *</label>
+        <label for="form-talk-level" class="col-sm-2 control-label">Experience Level *</label>
         <div class="col-sm-10">
             <select id="form-talk-level" name="level" class="form-control">
                 {% for levelKey, displayLevel in talkLevels %}
@@ -66,7 +66,7 @@
     </div>
 
     <div class="form-group">
-        <label for="form-given_before" class="col-sm-2 control-label">Have you given this talk before? *</label>
+        <label for="form-given_before" class="col-sm-2 control-label">Have you given this talk/workshop before? *</label>
         <div class="col-sm-10">
             <div class="radio">
                 <label for="form-given_before">
@@ -94,7 +94,7 @@
     </div>
 
     <div class="form-group">
-        <label for="form-talk-slides_urls" class="col-sm-2 control-label">Link to slides of previous talks </label>
+        <label for="form-talk-slides_urls" class="col-sm-2 control-label">Link to slides of previous talks/workshops</label>
         <div class="col-sm-10">
             <input id="form-talk-slides_urls" type="text" name="slides_urls" class="form-control" value="{{ slides_urls }}">
         </div>
