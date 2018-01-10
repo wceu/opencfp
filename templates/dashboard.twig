@@ -47,7 +47,7 @@ function deleteTalk(tid) {
         </div>
     </div>
 
-    <h2 class="headline">My Applications</h2>
+    <h2 class="headline">My Submitted Applications</h2>
     {% if profile.talks is not empty %}
     <table class="table table-striped">
         <thead>
@@ -82,7 +82,7 @@ function deleteTalk(tid) {
     {% endif %}
     <div class="row">
         <div class="col-md-offset-10 col-md-2">
-            <p><a class="btn btn-success" href="{{ url('talk_new') }}">Submit a Talk/Workshop</a></p>
+            <p><a class="btn btn-success" href="{{ url('talk_new') }}">Submit a new Talk/Workshop</a></p>
         </div>
     </div>
 
