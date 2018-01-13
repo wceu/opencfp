@@ -30,7 +30,7 @@
                         <li{% if active('workshops') %} class="active"{% endif %}><a href="{{ url('workshops') }}">Workshops</a></li>
                         {% if user is defined and user is not empty %}
                             <li{% if active('dashboard') %} class="active"{% endif %}><a href="{{ url('dashboard') }}">Dashboard</a></li>
-                            {% if user_is_admin %}
+                            {% if user_is_voter or user_is_admin %}
                                 <li><a href="{{ url('admin') }}">Admin</a></li>
                             {% endif %}
                             <li><a href="{{ url('logout') }}">Logout</a></li>

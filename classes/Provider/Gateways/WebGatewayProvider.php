@@ -39,6 +39,7 @@ class WebGatewayProvider implements BootableProviderInterface, ServiceProviderIn
             if ($app[Authentication::class]->check()) {
                 $twig->addGlobal('user', $app[Authentication::class]->user());
                 $twig->addGlobal('user_is_admin', $app[Authentication::class]->user()->hasAccess('admin'));
+                $twig->addGlobal('user_is_voter', $app[Authentication::class]->user()->hasAccess('vote'));
             }
 
             if ($app['session']->has('flash')) {
