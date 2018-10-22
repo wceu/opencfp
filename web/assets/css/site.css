@@ -129,10 +129,11 @@ a:focus {
 .subheadline {
     font-size: 24px;
     line-height: 1.1;
+    font-family: "Lato", Geneva, Tahoma, sans-serif;
 }
 
 .headline--alpha {
-    font-weight: 700;
+    font-weight: 400;
     font-size: 22px;
 }
 
