@@ -7,15 +7,15 @@ body {
 }
 
 a {
-    color: #5566c3;
+    color: #db0577;
 }
 
 a:hover, a:focus {
-    color: #5566c3;
+    color: #770341;
 }
 
 a:hover {
-    color: #5566c3;
+    color: #770341;
 }
 
 .container a {
@@ -95,7 +95,7 @@ a:focus {
 }
 
 .section--primary {
-    background: #5566c3;
+    background: #1b646c;
     color: #FFF;
 }
 
@@ -115,7 +115,7 @@ a:focus {
 }
 
 .section--light {
-    background: #5566c3;
+    background: #1b646c;
     color: #575357;
 }
 
@@ -214,14 +214,14 @@ a:focus {
  */
 .btn-opencfp--primary {
     background: #FFF;
-    color: #5566c3;
+    color: #1b646c;
     margin: 10px 7px 0;
 }
 
 .btn-opencfp--primary:hover,
 .btn-opencfp--primary:focus {
     background: #F7F7F7;
-    color: #5566c3;
+    color: #1b646c;
     text-decoration: underline;
 }
 
@@ -267,7 +267,7 @@ a:focus {
 }
 
 .module__header {
-    background: #5566c3;
+    background: #1b646c;
     color: #FFF;
     padding: 1rem 2rem;
 }
@@ -384,7 +384,7 @@ a:focus {
 .primary-text,
 .megaphone-cover,
 .megaphone-end {
-    fill: #5566c3;
+    fill: #1b646c;
 }
 
 .base-text,
@@ -508,7 +508,7 @@ a:focus {
 .navbar-opencfp .nav .open>a:focus
 {
     background: none;
-    border-color: #5566c3;
+    border-color: #770341;
 }
 
 .nav>li>a:hover,
