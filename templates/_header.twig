@@ -1,10 +1,11 @@
 <header class="header">
         <div class="container">
             <div class="row">
+				<!--
                 <div class="col-md-3">
-                    <img src="/assets/img/logo-wceu-2019.png" class="svg-inject event-logo" alt="WordCamp Europe 2019 Logo">
-                </div>
-                <div class="col-md-9">
+                     <img src="/assets/img/logo-wceu-2020.png" class="svg-inject event-logo" alt="WordCamp Europe 2020 Logo">
+                </div> -->
+                <div class="col-md-12">
                     {% if cfp_open %}
                         <h1 class="headline headline-alpha">Call For Speakers and Workshops!</h1>
                         <div class="subheadline headline-alpha">Submissions accepted until {{ site.enddate | date(site.date_format) }}</div>
@@ -33,7 +34,7 @@
             {% if site.event_location is defined and site.date_format is defined %}
                 <div class="col-md-9">
                     <h3 class="headline headline--alpha">
-                        {{ site.title }} is 20-22 June 2019 in {{ site.event_location }}
+                        {{ site.title }} is 4-6 June 2020 in {{ site.event_location }}
                     </h3>
                 </div>
             {%  else %}

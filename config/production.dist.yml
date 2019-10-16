@@ -1,19 +1,19 @@
 application:
-  title: WordCamp Europe 2019
+  title: WordCamp Europe 2020
   url: http://opencfp.local
   email: hello@wp-europe.org
-  eventurl: https://2019.europe.wordcamp.org/
-  event_location: Berlin, Germany
-  enddate: 07 January 2019
+  eventurl: https://2020.europe.wordcamp.org/
+  event_location: Porto, Portugal
+  enddate: 06 January 2020
   show_submission_count: false
-  airport: BER
-  arrival: 2019-06-18
-  departure: 2019-06-23
+  airport: OPO
+  arrival: 2020-06-03
+  departure: 2020-06-07
   secure_ssl: false
   online_conference: false
   date_format: j F Y
-  date_timezone: "Europe/Berlin"
-  coc_link: https://2019.europe.wordcamp.org/code-of-conduct/
+  date_timezone: "Europe/Lisbon"
+  coc_link: https://2020.europe.wordcamp.org/code-of-conduct/
 
 api:
   enabled: true
