@@ -80,10 +80,18 @@ function deleteTalk(tid) {
     {% else %}
         You currently have no talks submitted.
     {% endif %}
+	{% if site.limit_submissions is defined and profile.talks|length >= site.limit_submissions %}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="alert alert-warning">You have reached your talk/workshops submissions limit ({{ site.limit_submissions }}). You can delete entries to add new submissions or edit the existing ones.</div>
+        </div>
+    </div>
+	{% else %}
     <div class="row">
         <div class="col-md-offset-9 col-md-3">
             <p class="pull-right"><a class="btn btn-success" href="{{ url('talk_new') }}">Submit a new Talk/Workshop</a></p>
         </div>
     </div>
+	{% endif %}
 
 {% endblock %}

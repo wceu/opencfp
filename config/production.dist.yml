@@ -1,6 +1,6 @@
 application:
   title: WordCamp Europe 2020
-  url: http://opencfp.local
+  url: https://apply.wp-europe.org/
   email: hello@wp-europe.org
   eventurl: https://2020.europe.wordcamp.org/
   event_location: Porto, Portugal
@@ -14,6 +14,7 @@ application:
   date_format: j F Y
   date_timezone: "Europe/Lisbon"
   coc_link: https://2020.europe.wordcamp.org/code-of-conduct/
+  limit_submissions: 3
 
 api:
   enabled: true
