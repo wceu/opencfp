@@ -48,6 +48,11 @@ function deleteTalk(tid) {
     </div>
 
     <h2 class="headline">My Submitted Applications</h2>
+
+	{% if site.limit_submissions is defined %}
+	<p>You can submit up to {{site.limit_submissions}} applicatons.</p>
+	{% endif %}
+
     {% if profile.talks is not empty %}
     <table class="table table-striped">
         <thead>

@@ -55,8 +55,8 @@ talk:
   types:
     lightning: Lightning talk (10 mins)
     long: Long talk (30 mins, 15mins Q&A)
-    workshop_90_min: Workshop – 90 minutes
-    workshop_3_hours: Workshop – 3 hours
+    #workshop_90_min: Workshop – 90 minutes
+    #workshop_3_hours: Workshop – 3 hours
 
 security:
   firewalls:
