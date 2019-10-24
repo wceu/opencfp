@@ -54,7 +54,7 @@ talk:
     advanced: Advanced
   types:
     lightning: Lightning talk (10 mins)
-    long: Long talk (30 mins, 15mins Q&A)
+    long: Long talk (30 mins, 10 mins Q&A)
     #workshop_90_min: Workshop – 90 minutes
     #workshop_3_hours: Workshop – 3 hours
 
