@@ -66,8 +66,11 @@
             <li>Internet law</li>
         </ul>
 
-	<br>
-		<p>The Call for Workshops will open on 30 October 2019.</p>
+	{% if cfp_open %}
+        <p>
+            <a class="btn-opencfp btn-opencfp-medium btn-opencfp--light" href="{{ url('user_new') }}">Apply Now</a>
+        </p>
+    {% endif %}
     </div>
 {% endblock %}
 
